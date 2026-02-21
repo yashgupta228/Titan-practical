@@ -27,7 +27,7 @@ ax.scatter(X[y == 1, 0], X[y == 1, 1], color="blue", label="Rainy", s=100, edgec
 ax.scatter(temp, hum,
            color="red" if prediction == 1 else "orange",
            marker="*", s=300, edgecolor="black",
-           label-f"New Day: {label_map[prediction]}")
+           label=f"New Day: {label_map[prediction]}")
 ax.set_xlabel("Temperature")
 ax.set_ylabel("Humidity")
 ax.set_title("KNN Weather Classification")
