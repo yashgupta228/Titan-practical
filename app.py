@@ -14,15 +14,15 @@ st.sidebar.header("Input Features")
 temp = st.sidebar.slider("Temperature", 10, 60, 26)
 hum = st.sidebar.slider("Humidity", 50, 95, 78)
 
-knn KNeighborsClassifier(n_neighbors=3)
+knn = KNeighborsClassifier(n_neighbors=3)
 knn.fit(x, y)
 new_data = np.array([[temp, hum]])
-prediction knn.predict(new_data)[0]
+prediction =knn.predict(new_data)[0]
 
 st.write(f"Predicted Weather: **{label_map[prediction]}**")
 
 fig, ax plt.subplots()
-ax.scatter(X[y == 0, 0], X[y = 0, 1], color="orange", label="Sunny", s=100, edgecolor="k")
+ax.scatter(X[y == 0, 0], X[y == 0, 1], color="orange", label="Sunny", s=100, edgecolor="k")
 ax.scatter(X[y == 1, 0], X[y == 1, 1], color="blue", label="Rainy", s=100, edgecolor="k")
 ax.scatter(temp, hum,
            color="red" if prediction == 1 else "orange",
