@@ -15,9 +15,9 @@ temp = st.sidebar.slider("Temperature", 10, 60, 26)
 hum = st.sidebar.slider("Humidity", 50, 95, 78)
 
 knn = KNeighborsClassifier(n_neighbors=3)
-knn.fit(x, y)
+knn.fit(X, y)
 new_data = np.array([[temp, hum]])
-prediction =knn.predict(new_data)[0]
+prediction = knn.predict(new_data)[0]
 
 st.write(f"Predicted Weather: **{label_map[prediction]}**")
 
