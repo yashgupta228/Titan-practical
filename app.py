@@ -11,7 +11,7 @@ y= np.array([0, 1, 0, 0, 1, 1])
 label_map = {0: "Sunny", 1: "Rainy"}
 
 st.sidebar.header("Input Features")
-temp st.sidebar.slider("Temperature", 10, 60, 26)
+temp = st.sidebar.slider("Temperature", 10, 60, 26)
 hum = st.sidebar.slider("Humidity", 50, 95, 78)
 
 knn KNeighborsClassifier(n_neighbors=3)
